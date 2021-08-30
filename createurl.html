@@ -15,11 +15,26 @@
 
 <body>
     <div class="topnav">
-        <a class="active" href="#home">Home</a>
-        <a href="#news">News</a>
+        <a href="/index.html">Message</a>
+        <a class="active" href="/createurl.html">Create Message</a>
     </div>
-    <h1 id="reveal" class="center"></h1>
+    
+    <div class="center form-div card">
+        <h3 id="reveal"></h3>
+        <form>
+            <label for="fname">Enter your name</label>
+            <input class="focus" type="text" id="fname" name="firstname" placeholder="Your name here...">
 
+            <label for="lname">Enter your message</label>
+            <input class="focus" type="text" id="lname" name="lastname" placeholder="Your message here...">
+
+            <label for="lname">Generated URL</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your URL will be generated here." readonly>
+
+            <button type="button">Generate URL</button>
+            <button type="button">Copy URL</button>
+        </form>
+    </div>
     <footer class="footer">
         <p>Decoding Text Animation</p>
         <p>&copy; Created by Adarsh Pandey</p>
@@ -27,11 +42,11 @@
             <a href="https://github.com/adarshpand3y/Decoding-Text-Animation" target="_blank">Github Repository</a>
             |
             <a href="https://github.com/adarshpand3y" target="_blank">Github Profile</a>
-            
+
         </p>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/craeteurl.js"></script>
 </body>
 
 </html>
