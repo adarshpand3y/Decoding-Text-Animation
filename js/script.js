@@ -1,20 +1,21 @@
+function makeid(length, t) {
+    var result = '';
+    var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for (var i = 0; i < length; i++) {
+        if (t.charAt(i) == ' ') {
+            result += " ";
+        }
+        else {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+    }
+    return result;
+}
+
+// Main Logic starts here
 window.onload = (event) => {
     var text = "";
-    function makeid(length, t) {
-        var result = '';
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        var charactersLength = characters.length;
-        for (var i = 0; i < length; i++) {
-            if (t.charAt(i) == ' ') {
-                result += " ";
-            }
-            else {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength));
-            }
-        }
-        return result;
-    }
-
     const queryString = window.location.search;
     if (queryString == "") {
         text = "Decoding Text Animation";
