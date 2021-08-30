@@ -23,16 +23,15 @@
         <h3 id="reveal"></h3>
         <form>
             <label for="fname">Enter your name</label>
-            <input class="focus" type="text" id="fname" name="firstname" placeholder="Your name here...">
+            <input class="focus" type="text" id="username" name="username" placeholder="Your name here...">
 
             <label for="lname">Enter your message</label>
-            <input class="focus" type="text" id="lname" name="lastname" placeholder="Your message here...">
+            <input class="focus" type="text" id="usermessage" name="usermessage" placeholder="Your message here...">
 
-            <label for="lname">Generated URL</label>
-            <textarea class="textarea-muted" type="text" id="lname" name="lastname" placeholder="Your URL will be generated here." readonly></textarea>
+            <label for="lname">Generated share message</label>
+            <textarea type="text" id="messagebox" name="lastname" placeholder="Your message will be generated here." readonly></textarea>
 
-            <button type="button">Generate URL</button>
-            <button type="button">Copy URL</button>
+            <button type="button" id="gen" onclick="createURL()">Generate message!</button>
         </form>
     </div>
     <footer class="footer">

@@ -36,7 +36,7 @@ window.onload = (event) => {
     }
 
     console.log("Text: ", text);
-    text = text.replaceAll("+", " ");
+    text = text.replaceAll("-", " ");
     r = document.getElementById("reveal");
     l = text.length;
     randomText = makeid(l, text);

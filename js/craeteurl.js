@@ -13,6 +13,24 @@ function makeid(length, t) {
     return result;
 }
 
+function createURL() {
+    let message = "";
+    let username = document.getElementById("username").value;
+    let usermessage = document.getElementById("usermessage").value;
+    let url = usermessage.replaceAll(" ", "-");
+    // Reversing url slug
+    url = url.split("").reverse().join("");
+    message = `${username} has sent a special message for you. Click the link below to view it.\nhttps://adarshpand3y.github.io/Decoding-Text-Animation/?message=${url}`;
+    let t = document.getElementById("messagebox");
+    t.value = message;
+    let b = document.getElementById("gen");
+    navigator.clipboard.writeText(message);
+    b.innerHTML = "Message Copied!";
+    setTimeout(function() {
+        b.innerHTML = "Generate message!";
+    }, 3000);
+}
+
 // Main logic starts here
 window.onload = (event) => {
     var text = "";
