@@ -23,8 +23,13 @@ function createURL() {
     message = `${username} has sent a special message for you. Click the link below to view it.\nhttps://adarshpand3y.github.io/Decoding-Text-Animation/?message=${url}`;
     let t = document.getElementById("messagebox");
     t.value = message;
-    let b = document.getElementById("gen");
+    // For Copying on Mobile Devices
+    t.select();
+    document.execCommand('copy');
+    // Copying on Desktop devices
+    // Copying twice just in case one fails
     navigator.clipboard.writeText(message);
+    let b = document.getElementById("gen");
     b.innerHTML = "Message Copied!";
     setTimeout(function() {
         b.innerHTML = "Generate message!";
